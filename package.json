@@ -1,4 +1,14 @@
 {
+  "name": "novi-eindopdracht",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "author": "Peter Groeneveld",
+  "license": "ISC",
   "devDependencies": {
     "parcel": "^2.6.0",
     "parcel-plugin-nuke-dist": "^1.0.1"
