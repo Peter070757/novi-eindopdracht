@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'komika_handregular';
+    src: url('komikah_-webfont.woff2') format('woff2'),
+    url('komikah_-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'komika_handbold';
+    src: url('komikahb-webfont.woff2') format('woff2'),
+    url('komikahb-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'komika_slickregular';
+    src: url('komikask-webfont.woff2') format('woff2'),
+    url('komikask-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'komika_slimregular';
+    src: url('komikasl-webfont.woff2') format('woff2'),
+    url('komikasl-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'komika_handbold_italic';
+    src: url('komikhbi-webfont.woff2') format('woff2'),
+    url('komikhbi-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'komika_handitalic';
+    src: url('komikhi_-webfont.woff2') format('woff2'),
+    url('komikhi_-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'komika_jamregular';
+    src: url('komikj__-webfont.woff2') format('woff2'),
+    url('komikj__-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'komika_jamitalic';
+    src: url('komikji_-webfont.woff2') format('woff2'),
+    url('komikji_-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'komika_slickitalic';
+    src: url('komikski-webfont.woff2') format('woff2'),
+    url('komikski-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'komika_slimitalic';
+    src: url('komiksli-webfont.woff2') format('woff2'),
+    url('komiksli-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
