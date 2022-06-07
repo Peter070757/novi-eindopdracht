@@ -1,0 +1,602 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'komika_handregular', sans-serif;
+}
+
+body {
+    font-family: 'komika_handregular', sans-serif;
+    font-size: 1.1em;
+    background-color: rgb(26, 26, 27);
+}
+
+header {
+    position: absolute;
+}
+
+h1 {
+    font-family: 'komika_handregular', sans-serif;
+    text-align: center;
+    font-size: 1.5em;
+    color: darkgoldenrod;
+}
+
+h2 {
+    font-family: 'komika_handregular', sans-serif;
+    text-align: center;
+    font-size: 1.2em;
+    color: darkgoldenrod;
+}
+
+h3 {
+    font-family: 'komika_handregular', sans-serif;
+    text-align: center;
+    font-size: 1.1em;
+    color: darkgoldenrod;
+    margin-top: 70px;
+    margin-left: 30px;
+}
+
+p {
+    margin: 0;
+}
+
+main {
+}
+
+/* Hamburger menu */
+.toggler {
+    z-index: 2;
+    height: 40px;
+    width: 100px;
+    position: absolute;
+    top: 30px;
+    left: 1px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100px;
+    padding: 0.6rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburger > div {
+    position: relative;
+    top: 0;
+    left: 0;
+    background: saddlebrown;
+    height: 6px;
+    width: 70%;
+    transition: all 0.4s ease;
+}
+
+.hamburger > div::before,
+.hamburger > div::after {
+    content: '';
+    position: absolute;
+    top: -15px;
+    background: darkgoldenrod;
+    width: 100%;
+    height: 4px;
+    transition: all 0.4s ease;
+}
+
+.hamburger > div::after {
+    top: 15px;
+}
+
+.toggler:checked + .hamburger > div {
+    background: rgba(0, 0, 0, 0);
+}
+
+.toggler:checked + .hamburger > div::before {
+    top: 0;
+    transform: rotate(45deg);
+    background: darkgoldenrod;
+}
+
+.toggler:checked + .hamburger > div::after {
+    top: 0;
+    transform: rotate(135deg);
+    background: darkgoldenrod;
+}
+
+.menu {
+    background: #404041;
+    width: 0;
+    height: 20vh;
+    transition: all 0.4s ease;
+}
+
+.toggler:checked ~ .menu {
+    width: 0;
+}
+
+.menu > div > ul {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 100px;
+    padding-left: 70px;
+    visibility: hidden;
+}
+
+.menu > div > ul > li {
+    list-style: none;
+    padding: 0.5rem;
+}
+
+.menu > div > ul > li > a {
+    font-family: 'komika_handregular', sans-serif;
+    color: darkgoldenrod;
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+.toggler:checked ~ .menu > div > ul {
+    transition: visibility 0.4s ease;
+    transition-delay: 0.1s;
+    visibility: visible;
+}
+
+.toggler:checked ~ .menu > div > ul > li > a:hover {
+    color: sienna;
+}
+
+/* End Hamburger menu */
+
+.center-aligned-header-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    color: darkgoldenrod;
+    font-size: 2.7rem;
+    font-weight: bolder;
+    text-shadow: 1px 1px 2px whitesmoke, 0 0 25px whitesmoke, 0 0 5px black;
+    margin-top: -470px;
+
+    /* Even nodig om pagina te printen/ opslaan pdf. */
+    /*margin-top: -220px;*/
+}
+
+.header-img {
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px darkgoldenrod solid;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.img-header {
+    width: 450px;
+}
+
+section {
+    min-height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+    background-color: rgb(26, 26, 27);
+}
+
+section > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 90%;
+    height: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cartoon speech bubbles */
+.bubbles {
+    font-family: 'komika_handitalic', sans-serif;
+    width: 400px; /* Bubbles width */
+    background: #ff0;
+    position: relative;
+    margin-bottom: -20px; /* Move bubbles down */
+}
+
+.bubbles-ingredients {
+    width: 700px;
+    position: relative;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.bubble {
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    vertical-align: top;
+    border: 3px solid darkgoldenrod;
+    margin: 20px 20px;
+    z-index: 1;
+}
+
+.bubble.arrow::before,
+.bubble.arrow::after {
+    position: absolute;
+    background-color: #fff;
+    content: "\00a0";
+    display: block;
+    height: 10px;
+    width: 24px;
+    left: 20px;
+    bottom: -10px;
+    transform: rotate(-45deg) skew(-45deg);
+}
+
+.bubble.arrow::before {
+    background-color: transparent;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    width: 30px;
+}
+
+.bubble.arrow::after {
+    bottom: -8px;
+    border: 3px solid darkgoldenrod;
+}
+
+.bubble > .content {
+    position: relative;
+    background-color: rgb(248, 247, 247);
+    border-radius: 10px;
+    z-index: 1;
+    padding: 10px 16px;
+}
+
+.bubble.br::before,
+.bubble.br::after {
+    left: auto;
+    right: 100px; /* Move bubble arrow */
+    transform: rotate(45deg) skew(45deg); /* Bubble arrow pointing right */
+}
+
+.bubble.br::before {
+    bottom: -10px;
+    width: 24px;
+    right: 21px;
+}
+
+.bubble.sm::before,
+.bubble.sm::after {
+    left: 170px; /* Move bubble arrow */
+    right: auto;
+    transform: rotate(-45deg) skew(-45deg); /* Bubble arrow pointing left */
+}
+
+.bubble.sm,
+.bubble.sm > .content {
+    border-radius: 10px;
+}
+
+.bubble.tl::before,
+.bubble.tl::after {
+    bottom: auto;
+    top: -8px;
+    height: 19px;
+    transform: rotate(-135deg) skew(45deg);
+}
+
+.bubble.tl::before {
+    display: none;
+}
+
+.bubble.tr::before,
+.bubble.tr::after {
+    bottom: auto;
+    left: auto;
+    right: 20px;
+    top: -8px;
+    height: 19px;
+    transform: rotate(135deg) skew(-45deg);
+}
+
+.bubble.tr::before {
+    bottom: auto;
+    top: -9px;
+    width: 24px;
+    right: 21px;
+    box-shadow: -2px -2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.bubble.small,
+.bubble.small > .content {
+    border-radius: 10px;
+}
+
+.bubble.medium,
+.bubble.medium > .content {
+    font-family: 'komika_handitalic', sans-serif;
+    border-radius: 13px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.bubble.large,
+.bubble.large > .content {
+    border-radius: 16px;
+}
+
+/*End cartoon speech bubbles */
+
+.brand {
+    text-align: center;
+    font-size: 2rem;
+    color: whitesmoke;
+    margin-bottom: 30px;
+}
+
+
+.brand1 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: darkgoldenrod;
+    margin-bottom: 30px;
+}
+
+span {
+    font-size: 1.5rem;
+    color: darkgoldenrod;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    font-size: 1rem;
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: rgb(223, 223, 223);
+    border-radius: 4px;
+}
+
+form input {
+    font-family: 'komika_handregular', sans-serif;
+    width: 90%;
+    background-color: transparent;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 1.3rem;
+    display: inline-block;
+}
+
+.button1 {
+    font-family: 'komika_handregular', sans-serif;
+    width: 90%;
+    background-color: darkgoldenrod;
+    max-width: 150px;
+    margin: 0 auto;
+    padding: 10px;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    outline: none;
+    font-size: 1.7rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.button-print {
+    font-family: 'komika_handregular', sans-serif;
+    width: 90%;
+    background-color: darkgoldenrod;
+    max-width: 200px;
+    margin: 0 auto;
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1.2rem;
+    display: inline-block;
+    cursor: pointer;
+
+}
+
+.search-result {
+    margin-top: 50px;
+    width: 100%;
+    display: grid;
+    gap: 25px;
+    grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.item {
+    width: 100%;
+    border-radius: 8px;
+    background-color: rgb(57, 57, 57);
+    padding: 15px;
+    overflow: hidden;
+}
+
+.item img {
+    width: 100%;
+    height: 300px;
+    border-radius: 4px;
+}
+
+.item .flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item .title {
+    color: whitesmoke;
+    margin: 20px 10px 0 0;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.item .title-nutrients {
+    color: whitesmoke;
+    text-align: left;
+    margin: 20px 10px 0 0;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.view-button {
+    text-decoration: none;
+    text-align: center;
+    width: 130px;
+    padding: 10px 0;
+    background-color: rgb(26, 26, 27);;
+    color: darkgoldenrod;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    align-self: flex-start;
+    border-radius: 5px;
+}
+
+.item-data {
+    color: whitesmoke;
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    letter-spacing: .05rem;
+    line-height: 2rem;
+}
+
+.item-data1 {
+    color: darkgoldenrod;
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    letter-spacing: .05rem;
+    line-height: 2rem;
+}
+
+.container.initial .brand {
+    font-size: 2rem;
+}
+
+.container.initial form {
+    max-width: 600px;
+}
+
+.container.initial form input {
+    padding: 10px;
+    font-size: 1.8rem;
+}
+
+#footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    height: 50px;
+    width: 100vw;
+    bottom: 0;
+    background-color: darkgoldenrod;
+    font-family: 'komika_handregular', sans-serif;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .bubbles-ingredients {
+        width: 500px;
+        position: relative;
+        color: black;
+        margin-bottom: 30px;
+    }
+
+    .bubble.medium,
+    .bubble.medium > .content {
+        font-family: 'komika_handitalic', sans-serif;
+        border-radius: 13px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .menu > div > ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 0.2rem;
+        position: fixed;
+        top: 100px;
+        padding-left: 20px;
+        visibility: hidden;
+    }
+
+    .menu > div > ul > li > a {
+        background-color: darkgoldenrod;
+        font-family: 'komika_handregular', sans-serif;
+        color: whitesmoke;
+        text-decoration: none;
+        font-size: 0.6rem;
+        padding: 3px 7px 3px 7px;
+        border-radius: 5px;
+    }
+
+    .center-aligned-header-text {
+        font-size: 1.4rem;
+        margin-top: 150px;
+    }
+
+    .header-text {
+        font-size: 1.6rem;
+    }
+
+    .search-result {
+        grid-gap: 10px;
+    }
+
+    .container.initial .brand {
+        font-size: 3rem;
+    }
+
+    .container.initial form {
+        max-width: 500px;
+    }
+
+    .container.initial form input {
+        padding: 10px;
+        font-size: 1.5rem;
+    }
+
+    #footer {
+        font-size: 0.65rem;
+    }
+}

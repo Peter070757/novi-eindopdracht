@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/random-meal.css">
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <title>NOVI final assignment Random Meal Page</title>
+</head>
+<body>
+<header>
+    <div class="menu">
+        <a class="#home" href="./index.html">Home</a>
+        <a class="#about" href="./about.html">About</a>
+        <a class="#Favorite" href="./index-app-recipe.html">Favorite Meal</a>
+        <a class="active" href="./random-meal.html">Random Meal</a>
+        <a class="#recipe" href="./mobile-recipe.html">Mobile Recipe</a>
+    </div>
+
+    <div class="center-aligned-header-text">
+        <img class="" src="./assets/cooking-images/asian-chef.jpg" width="450" alt="header image"/>
+        <div class="header-text">What are we cooking today?</div>
+    </div>
+
+
+</header>
+
+<section class="bubbles">
+    <div class="bubble medium">
+        <div class="content"><p>You never know what you want to cook tonight. With the random recipe menu finder you can
+            choose delicious recipes, desserts and also vegetarian meals from different countries.</p>
+            <p>Include ingredients list and its preparation also instruction video. <span>Enjoy your meal!</span></p>
+        </div>
+    </div>
+</section>
+<button class="button-print" onclick="window.print()">Print this page</button>
+<div class="container">
+    <div class="row text-center">
+        <h3>Feeling Hungry?</h3>
+        <h5>Get a random dinner & dessert by clicking the button below.</h5>
+        <button class="button-primary" id="get_meal">Random Recipe Search</button>
+    </div>
+    <div id="meal" class="row meal"></div>
+</div>
+
+<footer id="footer" class="outer-content-container">
+    <div class="inner-content-container">
+        Case Study final assignment Web Development © NOVI University 7 June 2022
+    </div>
+</footer>
+
+<script type="module" src="./js/randomMeal.js"></script>
+</body>
+</html>

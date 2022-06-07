@@ -1,0 +1,518 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'komika_handitalic', sans-serif;
+    background-color: rgb(26, 26, 27);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    min-height: 100vh;
+    color: whitesmoke;
+    font-size: 1.5em;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.center-aligned-header-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    color: darkgoldenrod;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    text-shadow: 1px 1px 2px whitesmoke, 0 0 25px whitesmoke, 0 0 5px black;
+    margin-top: 420px;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    overflow: hidden;
+    background-color: darkgoldenrod;
+    border: 1px darkgoldenrod solid;
+    border-radius: 6px;
+    margin: 30px auto 10px auto;
+}
+
+.menu a {
+    float: left;
+    color: white;
+    font-family: 'komika_handregular', sans-serif;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.menu a:hover {
+    background-color: rgb(26, 26, 27);
+    color: white;
+}
+
+.menu a.active {
+    background-color: rgb(26, 26, 27);
+    color: white;
+}
+
+/* unvisited link */
+section a:link {
+    color: #b4830b;
+    text-decoration: none;
+}
+
+/* visited link */
+section a:visited {
+    color: darkgoldenrod;
+}
+
+/* mouse over link */
+section a:hover {
+    color: indigo;
+}
+
+/* selected link */
+section a:active {
+    color: white;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.columns {
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+}
+
+@media (min-width: 400px) {
+    .container {
+        width: 85%;
+        padding: 0;
+    }
+}
+
+@media (min-width: 550px) {
+    .container {
+        width: 80%;
+    }
+
+    .columns {
+        margin-left: 4%;
+    }
+
+    .columns:first-child {
+        margin-left: 0;
+    }
+
+    .img-width.columns {
+        width: 39.3%;
+    }
+
+    .body-width.columns {
+        width: 56.7%;
+    }
+
+    .offset-by-one-half.columns {
+        margin-left: 52%;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+    letter-spacing: -0.1rem;
+}
+
+h2 {
+    font-size: 3.6rem;
+    line-height: 1.25;
+    letter-spacing: -0.1rem;
+}
+
+h3 {
+    font-size: 3rem;
+    line-height: 1.3;
+    letter-spacing: -0.1rem;
+}
+
+h4 {
+    font-size: 2.4rem;
+    line-height: 1.35;
+    letter-spacing: -0.08rem;
+}
+
+h5 {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    letter-spacing: -0.05rem;
+}
+
+h6 {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    letter-spacing: 0;
+}
+
+div p span {
+    font-size: 2rem;
+    color: darkgoldenrod;
+}
+
+p {
+    margin-top: 0;
+}
+
+a {
+    color: #1eaedb;
+}
+
+a:hover {
+    color: #0fa0ce;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    display: inline-block;
+    height: 38px;
+    padding: 0 30px;
+    color: #555;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid #bbb;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.button.button-primary,
+button.button-primary,
+input[type="button"].button-primary,
+input[type="reset"].button-primary,
+input[type="submit"].button-primary {
+    font-family: 'komika_handregular', sans-serif;
+    color: #fff;
+    font-size: 1.8rem;
+    background-color: darkgoldenrod;
+    border-color: black;
+}
+
+.button,
+button {
+    margin-bottom: 1rem;
+}
+
+.button-print {
+    font-family: 'komika_handregular', sans-serif;
+    color: black;
+    font-size: 1.8rem;
+    background-color: darkgoldenrod;
+    border-color: black;
+    width: 250px;
+}
+
+ul {
+    list-style: circle inside;
+}
+
+ol {
+    list-style: decimal inside;
+}
+
+ol,
+ul {
+    padding-left: 0;
+    margin-top: 0;
+}
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+    margin: 1.5rem 0 1.5rem 3rem;
+    font-size: 90%;
+}
+
+li {
+    margin-bottom: 1rem;
+}
+
+ul {
+    margin-bottom: 2.5rem;
+}
+
+
+.container:after,
+.row:after,
+.u-cf {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Cartoon speech bubbles */
+.bubbles {
+    width: 500px;
+    position: relative;
+    color: black;
+
+}
+
+.bubble {
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    vertical-align: top;
+    border: 3px solid darkgoldenrod;
+    margin: 20px 20px;
+    z-index: 1;
+}
+
+.bubble.arrow::before,
+.bubble.arrow::after {
+    position: absolute;
+    background-color: #fff;
+    content: "\00a0";
+    display: block;
+    height: 18px;
+    width: 24px;
+    left: 20px;
+    bottom: -10px;
+    transform: rotate(-45deg) skew(-45deg);
+}
+
+.bubble.arrow::before {
+    background-color: transparent;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    width: 30px;
+}
+
+.bubble.arrow::after {
+    bottom: -8px;
+    border-width: 0 4px 3px 4px;
+}
+
+.bubble > .content {
+    position: relative;
+    background-color: rgb(248, 247, 247);
+    border-radius: 10px;
+    z-index: 1;
+    padding: 10px 16px;
+}
+
+.bubble.br::before,
+.bubble.br::after {
+    left: auto;
+    right: 20px;
+    transform: rotate(45deg) skew(45deg);
+}
+
+.bubble.br::before {
+    bottom: -10px;
+    width: 24px;
+    right: 21px;
+}
+
+.bubble.tl::before,
+.bubble.tl::after {
+    bottom: auto;
+    top: -8px;
+    height: 19px;
+    transform: rotate(-135deg) skew(45deg);
+}
+
+.bubble.tl::before {
+    display: none;
+}
+
+.bubble.tr::before,
+.bubble.tr::after {
+    bottom: auto;
+    left: auto;
+    right: 20px;
+    top: -8px;
+    height: 19px;
+    transform: rotate(135deg) skew(-45deg);
+}
+
+.bubble.tr::before {
+    bottom: auto;
+    top: -9px;
+    width: 24px;
+    right: 21px;
+    box-shadow: -2px -2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.bubble.small,
+.bubble.small > .content {
+    border-radius: 10px;
+}
+
+.bubble.medium,
+.bubble.medium > .content {
+    font-family: 'komika_handitalic', sans-serif;
+    border-radius: 13px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.bubble.large,
+.bubble.large > .content {
+    border-radius: 16px;
+}
+
+/*End cartoon speech bubbles */
+
+#loading {
+    background: url(../assets/cooking-images/loading-orange.gif) no-repeat center center transparent;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+img {
+    max-width: 100%;
+    border: 1px darkgoldenrod solid;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+p {
+    margin-bottom: 5px;
+}
+
+h3 {
+    margin: 0;
+}
+
+h5 {
+    margin: 20px 0;
+}
+
+h6 {
+    margin: 50px 0;
+    font-size: 2rem;
+}
+
+li {
+    margin-bottom: 0;
+}
+
+.meal {
+    margin: 20px 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+    bottom: 50px;
+}
+
+.videoWrapper iframe {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    bottom: 0;
+    background-color: darkgoldenrod;
+    font-family: 'komika_handregular', sans-serif;
+    color: white;
+    font-size: 1.0rem;
+}
+
+@media (min-width: 579px) {
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 850px;
+        overflow: hidden;
+        background-color: darkgoldenrod;
+        border: 1px darkgoldenrod solid;
+        border-radius: 6px;
+        margin: 0 auto 20px auto;
+    }
+
+    .menu a {
+        float: left;
+        color: white;
+        font-family: 'komika_handregular', sans-serif;
+        text-align: center;
+        padding: 10px 16px;
+        text-decoration: none;
+        font-size: 1.8rem;
+    }
+
+    #footer {
+        font-size: 2rem;
+    }
+}
