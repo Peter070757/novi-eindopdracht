@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/app-recipe.css">
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <script type="module" src="js/appRecipe.js" defer></script>
+    <title>Search recipe</title>
+</head>
+<body>
+
+<header>
+    <div class="menu">
+        <a class="#home" href="index.html">Home</a>
+        <a class="#about" href="about.html">About</a>
+        <a class="active" href="./index-app-recipe.html">Favorite Meal</a>
+        <a class="#recipe2" href="random-meal.html">Random Meal</a>
+        <a class="#recipe" href="mobile-recipe.html">Mobile Recipe</a>
+    </div>
+</header>
+
+<section class="container">
+    <div id="loading"></div>
+    <div class="search">
+        <input id="txtSearch" type="text"
+               placeholder="Search here for your favorite meal and hover over the image to get the ingredients , click on the title to view the recipe ."
+               autofocus/>
+        <button class="btn">Search</button>
+    </div>
+
+    <div id="recipe-container"></div>
+
+</section>
+<footer id="footer" class="outer-content-container">
+    <div class="inner-content-container">
+        Case Study final assignment Web Development &copy; NOVI University 7 June 2022
+    </div>
+</footer>
+</body>
+</html>

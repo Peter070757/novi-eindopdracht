@@ -2,12 +2,115 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./styles.css">
-    <title>NOVI Eindopdracht</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <title>NOVI final assignment June 2022</title>
 </head>
 <body>
-<h1>Eindopdracht</h1>
 
-<script src="./main.js" type="module"></script>
+<header>
+    <div class="menu">
+        <a class="active" href="./index.html">Home</a>
+        <a class="#about" href="about.html">About</a>
+        <a class="#Favorite" href="index-app-recipe.html">Favorite Meal</a>
+        <a class="#recipe2" href="random-meal.html">Random Meal</a>
+        <a class="#recipe" href="mobile-recipe.html">Mobile Recipe</a>
+    </div>
+
+    <div class="outer-content-container">
+        <div class="inner-content-container">
+            <div class="image-wrapper">
+                <img src="assets/cooking-images/group-cooks.jpg" alt="Header image"/>
+                <div class="header-text">What are we cooking today?</div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <button class="button-go" onclick="window.print()">Print this page</button>
+    <div class="container">
+        <div>
+            <section class="item item-a bubbles">
+                <div class="bubble medium arrow br">
+                    <div class="content">Hi, if you have time and like to cook a delicious meal today? Let's make it!
+                        Good cooking and Enjoy your meal!<a
+                                href="mobile-recipe.html"> Go and get your recipe here!</a>
+                    </div>
+                </div>
+            </section>
+            <section class="item item-d"><img src="assets/cooking-images/cooking.jpg" alt=""></section>
+        </div>
+
+        <div>
+            <section class="item item-b bubbles">
+                <div class="bubble medium arrow br">
+                    <div class="content">Hi, what ingredients do you have in your fridge or pantry today? Let's make a
+                        delicious meal with it! Good cooking and Enjoy your meal!<a
+                                href="index-app-recipe.html"> Go and get your recipe here!</a>
+                    </div>
+                </div>
+            </section>
+            <section class="item item-e"><img src="assets/cooking-images/fridge.jpg" alt=""></section>
+        </div>
+        <div>
+            <section class="item item-c bubbles">
+                <div class="bubble sm black arrow bl">
+                    <div class="content">You're not in the mood, or you don't feel like cooking today. Come on, let's
+                        cook a quick healthy meal together.<a
+                                href="mobile-recipe.html"> Go and get your recipe here!</a>
+                    </div>
+                </div>
+            </section>
+            <section class="item item-f"><img src="assets/cooking-images/mood.jpg" width="420" alt=""></section>
+        </div>
+    </div>
+    <div class="container">
+        <div>
+            <section class="item item-g bubbles">
+                <div class="bubble sm black arrow bl">
+                    <div class="content">We have also made a recipe page special for mobile devices with a real
+                        Hamburger menu : )<a href="mobile-recipe.html"> Go and get your recipe here!</a>
+                    </div>
+                </div>
+            </section>
+            <section class="item item-j"><img src="assets/cooking-images/mobile-cook.jpg" width="420" alt="">
+            </section>
+        </div>
+        <div>
+            <section class="item item-h bubbles">
+                <div class="bubble sm black arrow bl">
+                    <div class="content">Hi, you also love food from other countries?
+                        Search for your favorite meal and prepare it with your friends!
+                        <a href="index-app-recipe.html"> Go and get your recipe here!</a>
+                    </div>
+                </div>
+            </section>
+            <section class="item item-k"><img src="assets/cooking-images/chinese-chef.jpg" width="420" alt="">
+            </section>
+        </div>
+        <div>
+            <section class="item item-i bubbles">
+                <div class="bubble sm black arrow bl">
+
+                    <div class="content">Hi, if you don't know what to cook today .
+                        Whe give you delicious random recipes also vegetarian meals from different countries .
+
+                        <a href="random-meal.html"> Go and get your recipe here!</a>
+                    </div>
+                </div>
+            </section>
+            <section class="item item-l"><img src="assets/cooking-images/kokkin.jpg" alt=""></section>
+        </div>
+    </div>
+
+</main>
+
+<footer id="footer" class="outer-content-container">
+    <div class="inner-content-container">
+        Case Study final assignment Web Development © NOVI University 7 June 2022
+    </div>
+</footer>
+
 </body>
 </html>
